@@ -1,0 +1,35 @@
+.table {
+  &.table-hover {
+    & tbody {
+      td {
+        vertical-align: middle !important;
+      }
+      tr {
+        &.active {
+          background-color: $gray-100;
+          color: $primary;
+          font-weight: bold;
+        }
+        &:hover {
+          color: $primary;
+          background-color: $yellow-100;
+        }
+      }
+    }
+  }
+  &.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.02);
+
+  }
+  &.table-hover tbody tr:hover {
+    color: #3a3b45;
+    background-color: #fff1c6;
+  }
+  thead {
+    th {
+      border-bottom: 1px;
+      border-top: 0;
+      color: $secondary;
+    }
+  }
+}

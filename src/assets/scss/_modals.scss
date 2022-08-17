@@ -1,0 +1,13 @@
+.modal {
+  color: $primary;
+
+  .modal-body {
+    text-align: left !important;
+  }
+  .modal-header {
+    background-color: $gray-200;
+  }
+  .modal-footer {
+    background-color: $gray-100;
+  }
+}

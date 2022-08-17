@@ -1,0 +1,61 @@
+// Custom Card Styling
+
+.card {
+  margin-bottom: 30px;
+  border: 0px;
+  .card-body {
+    text-align: left !important;
+    padding: 20px 30px;
+
+    &.min-height {
+      min-height: 30vh;
+    }
+  }
+
+  .card-header {
+    color: $primary;
+    background-color: $gray-300;
+    font-weight: bold;
+    border-radius: $border-radius $border-radius 0 0;
+
+    .title {
+      line-height: 38px;
+      margin: 0;
+    }
+    // Format Dropdowns in Card Headings
+    .dropdown {
+      line-height: 1;
+      .dropdown-menu {
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .card-footer {
+    text-align: right;
+  }
+
+  // Collapsable Card Styling
+  .card-header[data-toggle="collapse"] {
+    text-decoration: none;
+    position: relative;
+    padding: 0.75rem 3.25rem 0.75rem 1.25rem;
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding-right: 1.725rem;
+      line-height: 51px;
+      font-weight: 900;
+      content: "\f107";
+      font-family: "Font Awesome 5 Free";
+      color: $gray-400;
+    }
+    &.collapsed {
+      // border-radius: $card-border-radius;
+      &::after {
+        content: "\f105";
+      }
+    }
+  }
+}

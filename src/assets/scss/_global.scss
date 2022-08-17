@@ -1,0 +1,96 @@
+// Global component styles
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+a {
+  &:focus {
+    outline: none;
+  }
+}
+
+// Main page wrapper
+#wrapper {
+  display: flex;
+  #content-wrapper {
+    background-color: $gray-200;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    #content {
+      flex: 1 0 auto;
+    }
+  }
+  .bg-login {
+    //background: url($bg-login);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+    z-index: 1;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: -2;
+      opacity: 0.3;
+      background: linear-gradient(to right, #23074d, #cc5333);
+    }
+  }
+}
+
+.container,
+.container-fluid {
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
+}
+
+@media (min-width: 900px) {
+  .container-fluid {
+    padding-left: 10vh;
+    padding-right: 10vh;
+  }
+}
+// Scroll to top button
+.scroll-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  text-align: center;
+  color: $white;
+  background: fade-out($gray-800, 0.5);
+  line-height: 46px;
+  &:focus,
+  &:hover {
+    color: white;
+  }
+  &:hover {
+    background: $gray-800;
+  }
+  i {
+    font-weight: 800;
+  }
+}
+
+.mx-datepicker {
+  width: 100%;
+}
+
+.page-item {
+  cursor: pointer;
+}

@@ -1,0 +1,13 @@
+form {
+  .form-control:disabled,
+  .form-control[readonly] {
+    background-color: $bg-light;
+    opacity: 1;
+    border: 0px
+  }
+  .disabled {
+    background-color: $bg-light;
+    opacity: 1;
+    border: 0px
+  }
+}

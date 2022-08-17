@@ -1,0 +1,52 @@
+.radio {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: normal;
+
+  input {
+    position: absolute;
+    opacity: 0;
+
+    &:checked ~ .check-radio {
+      &:after {
+        display: block;
+      }
+    }
+  }
+
+  .check-radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 21px;
+    width: 21px;
+    background-color: $bg-light;
+    border-radius: 50%;
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 7px;
+      left: 7px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: $bg-light;
+    }
+  }
+  &:hover input ~ .check-radio {
+    background-color: $secondary;
+  }
+
+  input:checked ~ .check-radio {
+    background-color: $primary;
+  }
+}
